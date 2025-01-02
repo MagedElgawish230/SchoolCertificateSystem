@@ -1,11 +1,9 @@
-
-
-## 📋 Project Description
+ 📋 Project Description
 This repository includes a Solidity-based project with various contracts, scripts, and tests for blockchain development and deployment. The primary focus is on smart contract management and blockchain application scenarios.
 
 ---
 
-## 🌟 Features
+ 🌟 Features
 - Contains smart contracts for storage, ownership management, and a ballot system.
 - A specialized contract for managing school certificates (`SchoolCertificate.sol`).
 - Deployment scripts using both Ethers.js and Web3.js.
@@ -14,14 +12,14 @@ This repository includes a Solidity-based project with various contracts, script
 
 ---
 
-## 🛠 Requirements
+ 🛠 Requirements
 - Node.js and npm
 - Hardhat framework for Solidity development
 - Solidity compiler (tested with version 0.8.x or higher)
 
 ---
 
-## 📦 Installation
+ 📦 Installation
 
 1. Clone the repository:
    ```bash
@@ -36,15 +34,15 @@ This repository includes a Solidity-based project with various contracts, script
 
 ---
 
-## 🚀 Usage
+ 🚀 Usage
 
-### Compile Contracts
+ Compile Contracts
 1. Use Hardhat to compile the contracts:
    ```bash
    npx hardhat compile
    ```
 
-### Deploy Contracts
+ Deploy Contracts
 1. Deploy using Ethers.js script:
    ```bash
    npx hardhat run scripts/deploy_with_ethers.ts
@@ -55,7 +53,7 @@ This repository includes a Solidity-based project with various contracts, script
    npx hardhat run scripts/deploy_with_web3.ts
    ```
 
-### Run Tests
+ Run Tests
 - Execute the test suite for contracts:
   ```bash
   npx hardhat test
@@ -63,7 +61,7 @@ This repository includes a Solidity-based project with various contracts, script
 
 ---
 
-## 📁 File Structure
+ 📁 File Structure
 
 ```
 SchoolCertificateSystem/
@@ -92,23 +90,23 @@ SchoolCertificateSystem/
 
 ---
 
-## ⚙ Configuration
+ ⚙ Configuration
 - Modify `scenario.json` for different deployment or testing scenarios.
 - Update deployment scripts (`deploy_with_ethers.ts`, `deploy_with_web3.ts`) for custom configurations.
 
 ---
 
-## 📄 Documentation
+ 📄 Documentation
 - Refer to individual contract files for inline documentation.
 - The `scripts/` folder contains usage details for deployment.
 - The `tests/` folder includes test cases for validation.
 
 ---
 
-## 📫 Support
+ 📫 Support
 For support, open an issue in the repository or contact the maintainers.
 
 ---
 
-## 📄 License
+ 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
