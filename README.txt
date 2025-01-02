@@ -1,28 +1,114 @@
-REMIX DEFAULT WORKSPACE
+# MagedElgawish230
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+## 📋 Project Description
+This repository includes a Solidity-based project with various contracts, scripts, and tests for blockchain development and deployment. The primary focus is on smart contract management and blockchain application scenarios.
 
-This workspace contains 3 directories:
+---
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+## 🌟 Features
+- Contains smart contracts for storage, ownership management, and a ballot system.
+- A specialized contract for managing school certificates (`SchoolCertificate.sol`).
+- Deployment scripts using both Ethers.js and Web3.js.
+- Comprehensive testing suite for contracts.
+- JSON configurations for scenarios and metadata.
 
-SCRIPTS
+---
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+## 🛠 Requirements
+- Node.js and npm
+- Hardhat framework for Solidity development
+- Solidity compiler (tested with version 0.8.x or higher)
 
-For the deployment of any other contract, just update the contract name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+---
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+## 📦 Installation
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MagedElgawish230/SchoolCertificateSystem.git
+   cd SchoolCertificateSystem
+   ```
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+---
+
+## 🚀 Usage
+
+### Compile Contracts
+1. Use Hardhat to compile the contracts:
+   ```bash
+   npx hardhat compile
+   ```
+
+### Deploy Contracts
+1. Deploy using Ethers.js script:
+   ```bash
+   npx hardhat run scripts/deploy_with_ethers.ts
+   ```
+
+2. Deploy using Web3.js script:
+   ```bash
+   npx hardhat run scripts/deploy_with_web3.ts
+   ```
+
+### Run Tests
+- Execute the test suite for contracts:
+  ```bash
+  npx hardhat test
+  ```
+
+---
+
+## 📁 File Structure
+
+```
+SchoolCertificateSystem/
+│
+├── SchoolCertificate.sol           # Smart contract for school certificates
+├── contracts/                      # Additional Solidity contracts
+│   ├── 1_Storage.sol
+│   ├── 2_Owner.sol
+│   └── 3_Ballot.sol
+├── scripts/                        # Deployment scripts
+│   ├── deploy_with_ethers.ts
+│   ├── deploy_with_web3.ts
+│   ├── ethers-lib.ts
+│   └── web3-lib.ts
+├── tests/                          # Test files
+│   ├── Ballot_test.sol
+│   └── storage.test.js
+├── artifacts/                      # Compiled contract artifacts
+│   ├── SchoolCertificate.json
+│   ├── SchoolCertificate_metadata.json
+│   └── build-info/
+├── scenario.json                   # JSON file for scenario configuration
+├── .prettierrc.json                # Prettier configuration
+└── README.md                       # Documentation
+```
+
+---
+
+## ⚙ Configuration
+- Modify `scenario.json` for different deployment or testing scenarios.
+- Update deployment scripts (`deploy_with_ethers.ts`, `deploy_with_web3.ts`) for custom configurations.
+
+---
+
+## 📄 Documentation
+- Refer to individual contract files for inline documentation.
+- The `scripts/` folder contains usage details for deployment.
+- The `tests/` folder includes test cases for validation.
+
+---
+
+## 📫 Support
+For support, open an issue in the repository or contact the maintainers.
+
+---
+
+## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
